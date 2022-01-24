@@ -37,9 +37,9 @@
       <div class="cal_inner_div">
         <div class="cal_fun_div">
           <!-- result screen div start-->
-          <div class="hero_result_div">
-            <input type="text" id="calscr" value="0" class="cal_screen" />
-          </div>
+
+          <div type="text" id="screen" class="cal_screen" ></div>
+
           <!-- result screen div end -->
 
           <div class="hero_degree">
@@ -48,10 +48,10 @@
           </div>
           <div class="hero_mc_mr_fun">
             <button class="btn_fun btn_mc">MC</button>
-            <button class="btn_fun btn_mc">MR</button
-            ><button class="btn_fun btn_mc">M+</button>
-            <button class="btn_fun btn_mc">M-</button
-            ><button class="btn_fun btn_mc">MS</button>
+            <button class="btn_fun btn_mc">MR</button>
+            <button class="btn_fun btn_mc">M+</button>
+            <button class="btn_fun btn_mc">M-</button>
+            <button class="btn_fun btn_mc">MS</button>
           </div>
 
           <!-- dropdown function -->
@@ -78,22 +78,22 @@
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
-                  <button class="dropdown-item" href="#">sin</button>
+                  <button class="dropdown-item">sin</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">cos</button>
+                  <button class="dropdown-item">cos</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">tan</button>
+                  <button class="dropdown-item">tan</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">cosec</button>
+                  <button class="dropdown-item">cosec</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">sec</button>
+                  <button class="dropdown-item">sec</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">cot</button>
+                  <button class="dropdown-item">cot</button>
                 </li>
               </ul>
             </div>
@@ -120,16 +120,16 @@
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
-                  <button class="dropdown-item" href="#">abs</button>
+                  <button class="dropdown-item">abs</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">round</button>
+                  <button class="dropdown-item">round</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">floor</button>
+                  <button class="dropdown-item">floor</button>
                 </li>
                 <li>
-                  <button class="dropdown-item" href="#">ceil</button>
+                  <button class="dropdown-item">ceil</button>
                 </li>
               </ul>
             </div>
@@ -146,8 +146,8 @@
 
           <button class="clr_remain_btn">C</button>
 
-          <button class="clr_remain_btn">
-            <i class="fas fa-backspace"></i>
+          <button class="clr_remain_btn" id="backspace">&larr;
+            <!-- <i class="fas fa-backspace"></i> -->
           </button>
 
           <button class="clr_remain_btn">
@@ -175,7 +175,7 @@
           <button class="clr_remain_btn">n!</button>
 
           <button class="clr_remain_btn">
-            <span style="font-size: 1.4rem">&divide;</span>
+            <span style="font-size: 1.4rem">÷</span>
           </button>
 
           <button class="clr_remain_btn">𝑥<sup>y</sup></button>
@@ -186,7 +186,7 @@
 
           <button class="btn_num">9</button>
 
-          <button class="clr_remain_btn">&times;</button>
+          <button class="clr_remain_btn">X</button>
 
           <button class="clr_remain_btn">10<sup>𝑥</sup></button>
 
@@ -196,7 +196,7 @@
 
           <button class="btn_num">6</button>
 
-          <button class="clr_remain_btn">&minus;</button>
+          <button class="clr_remain_btn">-</button>
 
           <button class="clr_remain_btn">log</button>
 
@@ -214,9 +214,9 @@
 
           <button class="btn_num">0</button>
 
-          <button class="btn_num">&sdot;</button>
+          <button class="btn_num">.</button>
 
-          <button class="clr_equal">&equals;</button>
+          <button class="clr_equal">=</button>
 
           <!-- calculator buttons end -->
         </div>

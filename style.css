@@ -48,23 +48,21 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 83px repeat(3, 39px);
 }
-.hero_result_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero_result_div .cal_screen {
-  width: 100%;
+.cal_screen {
+  position: relative;
+  /* left: -10px; */
+  width: 95%;
   height: 100%;
   border: 0;
   background: none;
   outline: 0;
   font-size: 4.9rem;
   text-align: right;
-  margin-right: 17px;
   caret-color: transparent;
   padding-bottom: 16px;
+  overflow: hidden;
 }
+
 .btn_fun {
   border: 0;
   outline: none;
@@ -108,7 +106,7 @@ background-color: var(--clr-num-hover);
 }
 .hero_trigonmetry {
   display: grid;
-  grid-template-columns: 120px 120px;
+  grid-template-columns: repeat(2,120px);
   justify-items: center;
   padding: 10px;
   justify-items: center;
