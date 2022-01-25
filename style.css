@@ -169,6 +169,12 @@ button {
 .btn_num:hover {
   background-color: var(--clr-num-hover);
 }
+
+.basic_fun{
+  font-size: 1.8rem;
+}
+
+
 .clr_remain_btn {
   background-color: var(--clr-btn-bg);
 }

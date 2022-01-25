@@ -38,7 +38,7 @@
         <div class="cal_fun_div">
           <!-- result screen div start-->
 
-          <div type="text" id="screen" class="cal_screen" ></div>
+          <div type="text" id="screen" class="cal_screen"></div>
 
           <!-- result screen div end -->
 
@@ -47,7 +47,7 @@
             <button class="btn_fun btn_deg">F-E</button>
           </div>
           <div class="hero_mc_mr_fun">
-            <button class="btn_fun btn_mc">MC</button>
+            <button class="btn_fun btn_mc" onclick="funMC()">MC</button>
             <button class="btn_fun btn_mc">MR</button>
             <button class="btn_fun btn_mc">M+</button>
             <button class="btn_fun btn_mc">M-</button>
@@ -146,16 +146,17 @@
 
           <button class="clr_remain_btn">C</button>
 
-          <button class="clr_remain_btn" id="backspace">&larr;
+          <button class="clr_remain_btn" id="backspace">
+            &larr;
             <!-- <i class="fas fa-backspace"></i> -->
           </button>
 
           <button class="clr_remain_btn">
-            <span style="font-size: 1.4rem">𝑥<sup>2</sup></span>
+            <!-- <span style="font-size: 1.4rem">𝑥<sup>2</sup></span> -->𝑥^2
           </button>
 
           <button class="clr_remain_btn">
-            <sup>1</sup>&frasl;<sub style="font-size: 1.4rem">𝑥</sub>
+            <sup>1</sup>/<sub style="font-size: 1.4rem">𝑥</sub>
           </button>
 
           <button class="clr_remain_btn">
@@ -166,7 +167,9 @@
 
           <button class="clr_remain_btn">mod</button>
 
-          <button class="clr_remain_btn"><sup>2</sup>√𝑥</button>
+          <button class="clr_remain_btn">
+            <sup>2</sup>√𝑥
+          </button>
 
           <button class="clr_remain_btn">(</button>
 
@@ -174,11 +177,13 @@
 
           <button class="clr_remain_btn">n!</button>
 
-          <button class="clr_remain_btn">
-            <span style="font-size: 1.4rem">÷</span>
+          <button class="clr_remain_btn basic_fun" >
+            ÷
           </button>
 
-          <button class="clr_remain_btn">𝑥<sup>y</sup></button>
+          <button class="clr_remain_btn" >
+            𝑥<sup>y</sup>
+          </button>
 
           <button class="btn_num">7</button>
 
@@ -186,7 +191,7 @@
 
           <button class="btn_num">9</button>
 
-          <button class="clr_remain_btn">X</button>
+          <button class="clr_remain_btn basic_fun" >x</button>
 
           <button class="clr_remain_btn">10<sup>𝑥</sup></button>
 
@@ -196,7 +201,7 @@
 
           <button class="btn_num">6</button>
 
-          <button class="clr_remain_btn">-</button>
+          <button class="clr_remain_btn basic_fun" >-</button>
 
           <button class="clr_remain_btn">log</button>
 
@@ -206,7 +211,7 @@
 
           <button class="btn_num">3</button>
 
-          <button class="clr_remain_btn">&plus;</button>
+          <button class="clr_remain_btn basic_fun" >&plus;</button>
 
           <button class="clr_remain_btn">ln</button>
 
@@ -225,12 +230,8 @@
 
     <!-- main container start end-->
 
-    <!-- 
-
-    <button id="add" class="btn" onclick="addNum()">+</button>
-    <button id="sub" class="btn" onclick="subNum()">-</button>
-    <button id="mul" class="btn" onclick="mulNum()">*</button>
-    <button id="div" class="btn" onclick="divNum()">/</button> -->
+    <!-- javascript file -->
+    <script src="./cal.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
@@ -238,8 +239,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
-    <!-- javascript file -->
-    <script src="./cal.js"></script>
   </body>
 </html>
