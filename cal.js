@@ -29,7 +29,7 @@ for (let items of btns) {
         try {
           result = display.innerText;
           display.innerText = eval(result);
-         display.innerText = Number.parseFloat(display.innerText).toFixed(5);
+         display.innerText = Number.parseFloat(display.innerText);
        
         } catch {
           //   display.style.color= "red";
@@ -129,8 +129,10 @@ for (let items of btns) {
         display.innerText = Math.log(display.innerText).toFixed(8);
         break;
 
-      case "𝑥y":
-        display.innerText = Math.pow(display.innerText);
+      case "𝑥^y":
+       btn = "**";
+       display.innerText += btn;
+      //  display.innerText = eval(display.innerText);
         break;
 
       case "+/-":
