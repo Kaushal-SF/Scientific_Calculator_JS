@@ -1,5 +1,5 @@
 // select all the buttons
-let btns = document.querySelectorAll("button");
+let all_btns = document.querySelectorAll("button");
 
 // select the screen to show output
 let display = document.getElementById("screen");
@@ -7,16 +7,16 @@ let result = "";
 let memory = "";
 let curr_dis_val;
 
-// loop to get all buttons 
+// loop to get all buttons
 
-for (let items of btns) {
+for (let items of all_btns) {
   ("use strict");
 
   // put an event on click to get innerText value
   items.addEventListener("click", (e) => {
-    let btn = e.target.innerText;
+    let btn_val = e.target.innerText;
 
-    switch (btn) {
+    switch (btn_val) {
       // --------- memory functions start --------- //
 
       // memory clear (MC)
@@ -31,27 +31,28 @@ for (let items of btns) {
 
       // memory recall (MR - get the saved memory value )
       case "MR":
-        console.log("in MR: " + memory);
         display.innerText += memory;
         break;
 
-      // memory add (to add the memory val with current result) 
+      // memory add (to add the memory val with current result)
+
       case "M+":
         // first save the value using MS then apply M+
         curr_dis_val = Number.parseFloat(display.innerText);
         memory = Number.parseFloat(memory);
-        memory += curr_dis_val;                        // adding the ms value with current display value:
+        memory += curr_dis_val; // adding the ms value with current display value:
         display.innerText = memory;
         break;
+
+      // memory minus (to remove the memory val with current result)
 
       case "M-":
         // first save the value using MS then apply M-
         curr_dis_val = Number.parseFloat(display.innerText);
         memory = Number.parseFloat(memory);
-        memory = memory - curr_dis_val;              // subtract the ms value with current display value  
+        memory = memory - curr_dis_val; // subtract the ms value with current display value
         display.innerText = memory;
         break;
-
 
       // Tested example: 20*72 + 9*80 - 15*41 + 11*33 - 13*64:
 
@@ -60,24 +61,32 @@ for (let items of btns) {
       /* At start save the result of equation in MS then get the result for next equation then press M+
           and continue untill the end of equation  */
 
-
       // ---------- memory functions end  ------------  //
 
+      // from radian to deg
+
+      case "DEG":
+        let radian = display.innerText;
+        result = (radian * 180) / Math.PI;
+        display.innerText = result;
+        break;
 
       // to clear screen
+
       case "C":
         display.innerText = "";
         // memory = "";
         break;
 
       // backspace
+
       case "←":
         if (display.innerText)
           display.innerText = display.innerText.slice(0, -1);
         break;
 
       // to evaluate the result:
-      
+
       case "=":
         try {
           result = display.innerText;
@@ -85,6 +94,15 @@ for (let items of btns) {
           display.innerText = Number.parseFloat(display.innerText);
         } catch {
           display.innerText = "Invalid Input";
+        }
+        break;
+
+      // fixed
+
+      case "F-E":
+        let fix = display.innerText;
+        if (fix.length > 20) {
+          display.innerText = display.innerText.substring(0, 12);
         }
         break;
 
@@ -126,13 +144,13 @@ for (let items of btns) {
       // ------------ Another Functions Start ------------  //
 
       case "x":
-        btn = "*";
-        display.innerText += btn;
+        btn_val = "*";
+        display.innerText += btn_val;
         break;
 
       case "÷":
-        btn = "/";
-        display.innerText += btn;
+        btn_val = "/";
+        display.innerText += btn_val;
         break;
 
       case "π":
@@ -145,7 +163,8 @@ for (let items of btns) {
         eval(display.innerText);
         break;
 
-       // num^2 
+      // num^2
+
       case "𝑥^2":
         display.innerText = eval(display.innerText) * eval(display.innerText);
         break;
@@ -161,23 +180,25 @@ for (let items of btns) {
       case "exp":
         display.innerText = Math.exp(display.innerText).toFixed(8);
         break;
- 
+
       case "mod":
-        btn = "%";
-        display.innerText += btn;
+        btn_val = "%";
+        display.innerText += btn_val;
         break;
 
-        // square root
+      // square root
+
       case "2√𝑥":
         display.innerText = Math.sqrt(display.innerText);
         break;
 
-      // factorial of number  
+      // factorial of number
+
       case "n!":
         let num = Number.parseFloat(display.innerText);
 
         function fact(val) {
-          if (val < 0) return -1;
+          if (val < 0) return "Not allowed!!";
           else if (val == 0) return 1;
           else {
             return val * fact(val - 1);
@@ -188,6 +209,7 @@ for (let items of btns) {
         break;
 
       // 10^num
+
       case "10𝑥":
         display.innerText = 10 ** eval(display.innerText);
         break;
@@ -201,19 +223,20 @@ for (let items of btns) {
         break;
 
       // num^num
+
       case "𝑥^y":
-        btn = "**";
-        display.innerText += btn;
+        btn_val = "**";
+        display.innerText += btn_val;
         break;
 
       case "+/-":
         display.innerText = display.innerText * -1;
         break;
 
-      // ------------ Another Functions Start ------------  //
+      // ------------ Another Functions end ------------  //
 
       default:
-        display.innerText += btn;
+        display.innerText += btn_val;
     }
   });
 }
