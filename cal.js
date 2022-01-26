@@ -76,7 +76,8 @@ for (let items of btns) {
           display.innerText = display.innerText.slice(0, -1);
         break;
 
-      // to evaluate the result
+      // to evaluate the result:
+      
       case "=":
         try {
           result = display.innerText;
