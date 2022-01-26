@@ -105,6 +105,9 @@ button {
   color: #999292;
   font-weight: 100 !important;
 }
+
+/* ----------- dropdown options style -------- */
+
 .hero_trigonmetry {
   display: grid;
   grid-template-columns: repeat(2, 120px);
@@ -143,6 +146,9 @@ button {
 .dropdown-menu li:last-child {
   border-bottom: none;
 }
+
+/* ----------- dropdown options style end -------- */
+
 
 /* ----- key section start -------- */
 .cal_keys_div {
