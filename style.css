@@ -144,7 +144,7 @@ button {
   border-bottom: none;
 }
 
-/* key section start */
+/* ----- key section start -------- */
 .cal_keys_div {
   height: 289px;
   width: 100%;
@@ -190,4 +190,5 @@ button {
 .clr_equal:hover {
   background-color: var(--clr-equal-hover);
 }
-/* key section start end */
+
+/* ------ key section start end ---------- */

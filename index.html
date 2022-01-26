@@ -14,6 +14,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- favicon  -->
     <link
       rel="shortcut icon"
       href="./icons/icons8-calculator-48.png"
@@ -31,6 +33,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <!-- main container start-->
 
     <div class="hero_container_main">
@@ -47,7 +50,7 @@
             <button class="btn_fun btn_deg">F-E</button>
           </div>
           <div class="hero_mc_mr_fun">
-            <button class="btn_fun btn_mc" onclick="funMC()">MC</button>
+            <button class="btn_fun btn_mc">MC</button>
             <button class="btn_fun btn_mc">MR</button>
             <button class="btn_fun btn_mc">M+</button>
             <button class="btn_fun btn_mc">M-</button>
@@ -55,7 +58,9 @@
           </div>
 
           <!-- dropdown function -->
+
           <div class="hero_trigonmetry">
+
             <!-- Trigonometry Drop-Down -->
             <div class="dropdown">
               <a
@@ -87,18 +92,20 @@
                   <button class="dropdown-item">tan</button>
                 </li>
                 <li>
+                  <button class="dropdown-item">cot</button>
+                </li>
+                <li>
                   <button class="dropdown-item">cosec</button>
                 </li>
                 <li>
                   <button class="dropdown-item">sec</button>
                 </li>
-                <li>
-                  <button class="dropdown-item">cot</button>
-                </li>
+                
               </ul>
             </div>
 
-            <!-- Function Drop-Down -->
+            <!--- Function Drop-Down --->
+
             <div class="dropdown">
               <a
                 class="btn dropdown-toggle"
@@ -136,7 +143,8 @@
           </div>
         </div>
 
-        <!-- calculator buttons start -->
+        <!---- calculator buttons start ---->
+
         <div class="cal_keys_div">
           <button class="clr_remain_btn">2<sup>nd</sup></button>
 
@@ -146,13 +154,9 @@
 
           <button class="clr_remain_btn">C</button>
 
-          <button class="clr_remain_btn" id="backspace">
-            &larr;
-          </button>
+          <button class="clr_remain_btn" id="backspace">&larr;</button>
 
-          <button class="clr_remain_btn">
-             𝑥^<sup>2</sup>
-          </button>
+          <button class="clr_remain_btn">𝑥^<sup>2</sup></button>
 
           <button class="clr_remain_btn">
             <sup>1</sup>/<sub style="font-size: 1.4rem">𝑥</sub>
@@ -166,9 +170,7 @@
 
           <button class="clr_remain_btn">mod</button>
 
-          <button class="clr_remain_btn">
-            <sup>2</sup>√𝑥
-          </button>
+          <button class="clr_remain_btn"><sup>2</sup>√𝑥</button>
 
           <button class="clr_remain_btn">(</button>
 
@@ -176,13 +178,9 @@
 
           <button class="clr_remain_btn">n!</button>
 
-          <button class="clr_remain_btn basic_fun" >
-            ÷
-          </button>
+          <button class="clr_remain_btn basic_fun">÷</button>
 
-          <button class="clr_remain_btn" >
-            𝑥^y
-          </button>
+          <button class="clr_remain_btn">𝑥^y</button>
 
           <button class="btn_num">7</button>
 
@@ -190,7 +188,7 @@
 
           <button class="btn_num">9</button>
 
-          <button class="clr_remain_btn basic_fun" >x</button>
+          <button class="clr_remain_btn basic_fun">x</button>
 
           <button class="clr_remain_btn">10<sup>𝑥</sup></button>
 
@@ -200,7 +198,7 @@
 
           <button class="btn_num">6</button>
 
-          <button class="clr_remain_btn basic_fun" >-</button>
+          <button class="clr_remain_btn basic_fun">-</button>
 
           <button class="clr_remain_btn">log</button>
 
@@ -210,7 +208,7 @@
 
           <button class="btn_num">3</button>
 
-          <button class="clr_remain_btn basic_fun" >&plus;</button>
+          <button class="clr_remain_btn basic_fun">&plus;</button>
 
           <button class="clr_remain_btn">ln</button>
 
@@ -222,12 +220,13 @@
 
           <button class="clr_equal">=</button>
 
-          <!-- calculator buttons end -->
+          <!---- calculator buttons end ---->
+
         </div>
       </div>
     </div>
 
-    <!-- main container start end-->
+    <!---- main container start end ---->
 
     <!-- javascript file -->
     <script src="./cal.js"></script>
